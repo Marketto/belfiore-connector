@@ -105,6 +105,7 @@ window.lunrData = {
           "belfioreconnector#searchbynam",
           "function",
           "given",
+          "limit",
           "lt;async&gt",
           "match",
           "name",
@@ -260,7 +261,7 @@ window.lunrData = {
                                                 },
                                                 "BelfioreConnector.html#searchByName": {
                                                   "ref": "BelfioreConnector.html#searchByName",
-                                                  "tf": 25
+                                                  "tf": 20
                                                 }
                                               }
                                             }
@@ -1125,6 +1126,20 @@ window.lunrData = {
                   }
                 }
               }
+            },
+            "m": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "BelfioreConnector.html#searchByName": {
+                      "ref": "BelfioreConnector.html#searchByName",
+                      "tf": 20
+                    }
+                  }
+                }
+              }
             }
           },
           "t": {
@@ -1195,7 +1210,7 @@ window.lunrData = {
                                 },
                                 "BelfioreConnector.html#searchByName": {
                                   "ref": "BelfioreConnector.html#searchByName",
-                                  "tf": 25
+                                  "tf": 20
                                 },
                                 "BelfioreConnector.html#findByName": {
                                   "ref": "BelfioreConnector.html#findByName",
@@ -1227,7 +1242,7 @@ window.lunrData = {
                 "docs": {
                   "BelfioreConnector.html#searchByName": {
                     "ref": "BelfioreConnector.html#searchByName",
-                    "tf": 35
+                    "tf": 30
                   },
                   "BelfioreConnector.html#findByName": {
                     "ref": "BelfioreConnector.html#findByName",
@@ -1646,7 +1661,7 @@ window.lunrData = {
                               "docs": {
                                 "BelfioreConnector.html#searchByName": {
                                   "ref": "BelfioreConnector.html#searchByName",
-                                  "tf": 675
+                                  "tf": 670
                                 }
                               }
                             }
@@ -1692,7 +1707,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 111
+      "length": 112
     },
     "corpusTokens": [
       "1",
@@ -1732,6 +1747,7 @@ window.lunrData = {
       "handler",
       "index",
       "instanc",
+      "limit",
       "list",
       "list:namespac",
       "lt;async&gt",
@@ -1840,7 +1856,7 @@ window.lunrData = {
     "BelfioreConnector.html#searchByName": {
       "id": "BelfioreConnector.html#searchByName",
       "kind": "function",
-      "title": "&lt;async&gt; searchByName( name ) → {Array.&lt;Object&gt;}",
+      "title": "&lt;async&gt; searchByName( name [, limit ] ) → {Array.&lt;Object&gt;}",
       "longname": "BelfioreConnector#searchByName",
       "name": "searchByName",
       "tags": "BelfioreConnector#searchByName searchByName",

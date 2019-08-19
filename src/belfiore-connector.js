@@ -46,16 +46,27 @@ class BelfioreConnector {
      * Search places matching given name
      * @async
      * @param {string} name Place name
+     * @param {number} [limit=0] result limit
      * @returns {Array<Object>} List of places
      * @throws {Error} Missing or invalid provided name
      * @public
      */
-    async searchByName(name) {
-        if (typeof name !== 'string') {
-            throw new Error('Missing or invalid provided name');
+    async searchByName(name, limit = 0) {
+        if (name !== null && !['string', 'undefined'].includes(typeof name)) {
+            throw new Error('Missing or invalid provided name, it must be a string, null or undefined');
+        }
+        if (typeof limit !== 'number') {
+            throw new Error('Invalid provided limit, must be a number');
+        }
+        if (limit < 0) {
+            throw new Error('Invalid provided limit, must be equal or greater than 0');
         }
         if (!name) {
-            return await this.toArray();
+            const fullList = await this.toArray();
+            if (limit) {
+                return fullList.slice(0, limit);
+            }
+            return fullList;
         }
         return [];
     }
@@ -69,10 +80,8 @@ class BelfioreConnector {
      * @public
      */
     async findByName(name) {
-        if (!name || typeof name !== 'string') {
-            throw new Error('Missing or invalid provided name');
-        }
-        return null;
+        const result = this.searchByName(name, 1);
+        return result[0];
     }
 
     /**

@@ -1,11 +1,15 @@
 {
   "name": "@marketto/belfiore-connector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Belfiore abstract datasource connector",
-  "main": "belfiore-connector.min.js",
+  "main": "dist/belfiore-connector.min.js",
   "repository": "https://github.com/Marketto/belfiore-connector.git",
   "author": "Marco Ricupero <marco.ricupero@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Marketto/belfiore-connector/issues"
+  },
+  "homepage": "https://github.com/Marketto/belfiore-connector#readme",
   "scripts": {
     "test": "npx mocha",
     "coverage": "npx nyc --reporter=lcovonly npx mocha",
@@ -13,6 +17,9 @@
     "docs": "npx rimraf ./docs && npx jsdoc . -c jsdoc.json",
     "release": "npm run-script coverage && npm run-script docs && npm run-script build"
   },
+  "keywords": [
+    "Belfiore"
+  ],
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-things": "^0.2.0",

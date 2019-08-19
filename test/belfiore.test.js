@@ -15,9 +15,9 @@ describe('BelfioreConnector Instance', () => {
         });
     });
     describe('belfioreConnector.findByName()', () => {
-        it('Should return null', async () => {
+        it('Should return undefined', async () => {
             const result = await belfioreConnector.findByName('Roma');
-            expect(result).to.be.null;
+            expect(result).to.be.undefined;
         });
     });
 
