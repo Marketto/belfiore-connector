@@ -1,6 +1,6 @@
 {
   "name": "@marketto/belfiore-connector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Belfiore abstract datasource connector",
   "main": "dist/belfiore-connector.min.js",
   "repository": "https://github.com/Marketto/belfiore-connector.git",

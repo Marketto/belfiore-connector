@@ -91,9 +91,9 @@ class BelfioreConnector {
      */
     config() {
         const conf = {};
-        const inheritAttrs = Object.entries(this)
-            .filter(([key, value]) => (/^_[a-z]+/).test(key) && typeof value !== 'function')
-            .map(([key, value]) => ({[key.match(/^_(.+)$/i)[1]]: value}));
+        const inheritAttrs = Object.getOwnPropertyNames(this)
+            .filter(key => (/^_[a-z]+/).test(key) && typeof this[key] !== 'function')
+            .map(key => ({[key.match(/^_(.+)$/i)[1]]: this[key]}));
         inheritAttrs.forEach(attr => Object.assign(conf, attr));
         return conf;
     }
@@ -162,7 +162,6 @@ class BelfioreConnector {
         if (!belfioreCode || typeof belfioreCode !== 'string') {
             throw new Error('Missing or invalid provided code');
         }
-        return null;
     }
 
     /**
@@ -174,7 +173,7 @@ class BelfioreConnector {
      */
     static get (resource, paramName) {
         if (typeof paramName  === 'string' && (/^[A-Z]\d{3}$/u).test(paramName)){
-            return this.getByCode(paramName);
+            return resource.getByCode(paramName);
         }
 
         if (
@@ -182,7 +181,10 @@ class BelfioreConnector {
             ['cities', 'countries'].includes(paramName) ||
         
             paramName === 'byProvince' &&
-            (resource._codeMatcher.test('Z000') || resource._province)
+            (
+                resource._codeMatcher instanceof RegExp && resource._codeMatcher.test('Z000') ||
+                (/^[A-Z]{2}$/ui).test(resource._province)
+            )
         ) {
             return;
         }
