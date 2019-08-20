@@ -173,7 +173,7 @@ class BelfioreConnector {
      */
     static get (resource, paramName) {
         if (typeof paramName  === 'string' && (/^[A-Z]\d{3}$/u).test(paramName)){
-            return resource.getByCode.apply(resource, [paramName]);
+            return resource.getByCode(paramName);
         }
 
         if (
