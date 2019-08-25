@@ -1884,7 +1884,7 @@ window.lunrData = {
     "BelfioreConnector.html#searchByName": {
       "id": "BelfioreConnector.html#searchByName",
       "kind": "function",
-      "title": "&lt;async&gt; searchByName( name [, limit ] ) → {Array.&lt;Object&gt;}",
+      "title": "&lt;async&gt; searchByName( [ name [, limit ] ] ) → {Array.&lt;Object&gt;}",
       "longname": "BelfioreConnector#searchByName",
       "name": "searchByName",
       "tags": "BelfioreConnector#searchByName searchByName",

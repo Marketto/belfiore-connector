@@ -69,6 +69,11 @@ describe('BelfioreConnector Instance', () => {
             const result = await belfioreConnector.findByName(/^Roma$/i);
             expect(result).to.be.undefined;
         });
+        it('Should throw error for undefined, null or empty string', async () => {
+            await belfioreConnector.findByName().catch(err => err.should.be.a('Error'));
+            await belfioreConnector.findByName(null).catch(err => err.should.be.a('Error'));
+            await belfioreConnector.findByName('').catch(err => err.should.be.a('Error'));
+        });
     });
 
     describe('cities/countries', () => {
