@@ -149,7 +149,7 @@ class BelfioreConnector {
      * @public
      */
     async findByName(name) {
-        const result = this.searchByName(name instanceof RegExp ? name : new RegExp(`^${name}$`, 'ui'), 1);
+        const result = await this.searchByName(name instanceof RegExp ? name : new RegExp(`^${name}$`, 'ui'), 1);
         return result[0];
     }
 
