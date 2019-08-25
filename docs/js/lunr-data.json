@@ -116,6 +116,7 @@
         "BelfioreConnector.html#findByName": [
           "1",
           "belfioreconnector#findbynam",
+          "exactli",
           "find",
           "findbynam",
           "function",
@@ -186,7 +187,7 @@
           "docs": {
             "BelfioreConnector.html#findByName": {
               "ref": "BelfioreConnector.html#findByName",
-              "tf": 3.8461538461538463
+              "tf": 3.571428571428571
             }
           }
         },
@@ -927,7 +928,7 @@
                       },
                       "BelfioreConnector.html#findByName": {
                         "ref": "BelfioreConnector.html#findByName",
-                        "tf": 3.8461538461538463
+                        "tf": 3.571428571428571
                       },
                       "BelfioreConnector.html#active": {
                         "ref": "BelfioreConnector.html#active",
@@ -973,7 +974,7 @@
                   "docs": {
                     "BelfioreConnector.html#findByName": {
                       "ref": "BelfioreConnector.html#findByName",
-                      "tf": 3.8461538461538463
+                      "tf": 3.571428571428571
                     }
                   }
                 }
@@ -1034,7 +1035,7 @@
                     },
                     "BelfioreConnector.html#findByName": {
                       "ref": "BelfioreConnector.html#findByName",
-                      "tf": 3.8461538461538463
+                      "tf": 3.571428571428571
                     },
                     "BelfioreConnector.html#active": {
                       "ref": "BelfioreConnector.html#active",
@@ -1246,7 +1247,7 @@
                   },
                   "BelfioreConnector.html#findByName": {
                     "ref": "BelfioreConnector.html#findByName",
-                    "tf": 32.69230769230769
+                    "tf": 32.14285714285714
                   }
                 },
                 "s": {
@@ -1339,7 +1340,7 @@
                 "docs": {
                   "BelfioreConnector.html#findByName": {
                     "ref": "BelfioreConnector.html#findByName",
-                    "tf": 3.8461538461538463
+                    "tf": 3.571428571428571
                   }
                 },
                 "b": {
@@ -1456,7 +1457,7 @@
                     },
                     "BelfioreConnector.html#findByName": {
                       "ref": "BelfioreConnector.html#findByName",
-                      "tf": 7.6923076923076925
+                      "tf": 7.142857142857142
                     },
                     "BelfioreConnector.html#getByCode": {
                       "ref": "BelfioreConnector.html#getByCode",
@@ -1492,7 +1493,7 @@
                     },
                     "BelfioreConnector.html#findByName": {
                       "ref": "BelfioreConnector.html#findByName",
-                      "tf": 7.6923076923076925
+                      "tf": 7.142857142857142
                     },
                     "BelfioreConnector.html#getByCode": {
                       "ref": "BelfioreConnector.html#getByCode",
@@ -1534,7 +1535,7 @@
                     "docs": {
                       "BelfioreConnector.html#findByName": {
                         "ref": "BelfioreConnector.html#findByName",
-                        "tf": 3.8461538461538463
+                        "tf": 3.571428571428571
                       }
                     }
                   },
@@ -1675,6 +1676,32 @@
             }
           }
         },
+        "e": {
+          "docs": {},
+          "x": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "BelfioreConnector.html#findByName": {
+                          "ref": "BelfioreConnector.html#findByName",
+                          "tf": 3.571428571428571
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "o": {
           "docs": {},
           "b": {
@@ -1689,7 +1716,7 @@
                     "docs": {
                       "BelfioreConnector.html#findByName": {
                         "ref": "BelfioreConnector.html#findByName",
-                        "tf": 28.846153846153847
+                        "tf": 28.57142857142857
                       },
                       "BelfioreConnector.html#config": {
                         "ref": "BelfioreConnector.html#config",
@@ -1707,7 +1734,7 @@
           }
         }
       },
-      "length": 112
+      "length": 113
     },
     "corpusTokens": [
       "1",
@@ -1737,6 +1764,7 @@
       "datasourc",
       "date",
       "document",
+      "exactli",
       "filter",
       "find",
       "findbynam",
@@ -1871,7 +1899,7 @@
       "name": "findByName",
       "tags": "BelfioreConnector#findByName findByName",
       "summary": "",
-      "description": "Find place matching given name, retuns place object if provided name match only 1 result"
+      "description": "Find place matching exactly given name; retuns place object if provided name match only 1 result"
     },
     "BelfioreConnector.html#config": {
       "id": "BelfioreConnector.html#config",

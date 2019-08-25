@@ -45,14 +45,14 @@ class BelfioreConnector {
     /**
      * Search places matching given name
      * @async
-     * @param {string} name Place name
+     * @param {string|RegExp} name Place name or name matcher
      * @param {number} [limit=0] result limit
      * @returns {Array<Object>} List of places
      * @throws {Error} Missing or invalid provided name
      * @public
      */
     async searchByName(name, limit = 0) {
-        if (name !== null && !['string', 'undefined'].includes(typeof name)) {
+        if (!(name === null || ['string', 'undefined'].includes(typeof name) || name instanceof RegExp)) {
             throw new Error('Missing or invalid provided name, it must be a string, null or undefined');
         }
         if (typeof limit !== 'number') {
@@ -72,15 +72,15 @@ class BelfioreConnector {
     }
 
     /**
-     * Find place matching given name, retuns place object if provided name match only 1 result
+     * Find place matching exactly given name; retuns place object if provided name match only 1 result
      * @async
-     * @param {string} name Place name
+     * @param {string|RegExp} name Place name or name matcher
      * @returns {Object}
      * @throws {Error} Missing or invalid provided name
      * @public
      */
     async findByName(name) {
-        const result = this.searchByName(name, 1);
+        const result = this.searchByName(name instanceof RegExp ? name : new RegExp(`^${name}$`, 'ui'), 1);
         return result[0];
     }
 

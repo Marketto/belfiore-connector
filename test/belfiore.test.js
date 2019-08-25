@@ -54,11 +54,19 @@ describe('BelfioreConnector Instance', () => {
             const result = await belfioreConnector.searchByName('', 1);
             result.should.be.a('array');
         });
+        it('Should return array providing a regexp', async () => {
+            const result = await belfioreConnector.searchByName(new RegExp());
+            result.should.be.a('array');
+        });
     });
 
     describe('belfioreConnector.findByName()', () => {
-        it('Should return undefined', async () => {
+        it('Should return undefined ofr string (no exception)', async () => {
             const result = await belfioreConnector.findByName('Roma');
+            expect(result).to.be.undefined;
+        });
+        it('Should return undefined for regexp (no exception)', async () => {
+            const result = await belfioreConnector.findByName(/^Roma$/i);
             expect(result).to.be.undefined;
         });
     });
