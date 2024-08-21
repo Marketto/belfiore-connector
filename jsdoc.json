@@ -19,7 +19,7 @@
         "recurse": true
     },
     "templates": {
-        "systemName"            : "Belfiore Connector",
-        "systemSummary"         : "Belfiore abstract datasource connector"
+        "systemName"            : "Belfiore Connector Embedded",
+        "systemSummary"         : "Belfiore datasource connector: embedded dataset"
     }
 }

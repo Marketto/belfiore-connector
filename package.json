@@ -1,35 +1,52 @@
 {
-  "name": "@marketto/belfiore-connector",
-  "version": "1.0.6",
-  "description": "Belfiore abstract datasource connector",
-  "main": "dist/belfiore-connector.min.js",
-  "repository": "https://github.com/Marketto/belfiore-connector.git",
-  "author": "Marco Ricupero <marco.ricupero@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Marketto/belfiore-connector/issues"
-  },
-  "homepage": "https://github.com/Marketto/belfiore-connector#readme",
-  "scripts": {
-    "test": "npx mocha",
-    "coverage": "npx nyc --reporter=lcovonly npx mocha",
-    "build": "npx webpack",
-    "docs": "npx rimraf ./docs && npx jsdoc . -c jsdoc.json",
-    "release": "npm run-script coverage && npm run-script docs && npm run-script build"
-  },
-  "keywords": [
-    "Belfiore"
-  ],
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-things": "^0.2.0",
-    "foodoc": "^0.0.9",
-    "jsdoc": "^3.6.3",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
-    "rimraf": "^3.0.0",
-    "sonarqube-scanner": "^2.5.0",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
-  }
+	"name": "@marketto/belfiore-connector",
+	"version": "2.0.0",
+	"description": "Belfiore Abstract Connector & Typings",
+	"repository": "https://github.com/Marketto/belfiore-connector.git",
+	"author": "Marco Ricupero <marco.ricupero@gmail.com>",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"typings": "dist/index.d.ts",
+	"config": {
+		"name": "BelfioreAbstractConnector",
+		"iifeFileName": "belfiore-abstract-connector"
+	},
+	"bugs": {
+		"url": "https://github.com/Marketto/belfiore-connector/issues"
+	},
+	"homepage": "https://github.com/Marketto/belfiore-connector#readme",
+	"scripts": {
+		"release": "npm audit fix & npm run lint-fix && npm run docs && npm run build",
+		"build": "npx rimraf ./dist & npx rollup -c",
+		"lint": "npx tslint -c tslint.json \"src/**/*.ts\"",
+		"lint-fix": "npx tslint -c tslint.json \"src/**/*.ts\" --fix",
+		"docs": "npx rimraf ./docs & npx typedoc --options typedoc.json"
+	},
+	"keywords": [
+		"Belfiore"
+	],
+	"dependencies": {
+		"moment": "^2.24.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@types/node": "^20.12.13",
+		"rimraf": "^5.0.7",
+		"rollup": "^4.18.0",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-license": "^3.4.0",
+		"rollup-plugin-node-builtins": "^2.1.2",
+		"rollup-plugin-ts": "^3.4.5",
+		"source-map-support": "^0.5.19",
+		"ts-node": "^10.9.2",
+		"tslint": "^6.1.3",
+		"typedoc": "^0.25.13",
+		"typescript": "^5.4.5"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	}
 }
