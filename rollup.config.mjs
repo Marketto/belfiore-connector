@@ -15,7 +15,6 @@ const baseConf = {
     output: {
         exports: "named",
         globals: {
-            "moment": "moment",
         },
         name: pkg.config.name,
         sourcemap: true,
