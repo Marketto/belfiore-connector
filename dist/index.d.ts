@@ -1,5 +1,3 @@
-import { Moment } from 'moment';
-
 interface IBelfioreCommonPlace {
     belfioreCode: string;
     creationDate: Date;
@@ -32,7 +30,7 @@ interface IBelfiorePlace extends IBelfioreCommonPlace {
 
 type BelfiorePlace = IBelfiorePlace | IBelfioreCity | IBelfioreCountry;
 
-type MultiFormatDate = string | Date | Moment | number[];
+type MultiFormatDate = string | Date | number[];
 
 interface IBelfioreConnector {
     get provinces(): Promise<string[]>;
@@ -65,8 +63,8 @@ declare abstract class BelfioreAbstractConnector implements IBelfioreConnector {
 }
 
 interface IBelfioreConnectorCommonConfig {
-    fromDate?: Moment;
-    toDate?: Moment;
+    fromDate?: Date;
+    toDate?: Date;
 }
 
 interface IBelfioreConnectorBaseConfig extends IBelfioreConnectorCommonConfig {

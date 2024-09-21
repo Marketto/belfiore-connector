@@ -1,5 +1,5 @@
 /**
- * @marketto/belfiore-connector 2.0.0
+ * @marketto/belfiore-connector 3.0.0
  * Copyright (c) 2019-2024, Marco Ricupero <marco.ricupero@gmail.com>
  * License: MIT
  */
